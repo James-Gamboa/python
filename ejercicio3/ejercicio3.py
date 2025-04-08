@@ -8,7 +8,7 @@
 # • Muestra el resultado al usuario.
 
 list_numbers = input("Ingrese una lista de números separados por comas: ")
-list_numbers = [int(num) for num in list_numbers.split(',')]
+list_numbers = [int(num) for num in list_numbers.split(",")]
 
 for i in list_numbers:
     if i % 2 == 0:
