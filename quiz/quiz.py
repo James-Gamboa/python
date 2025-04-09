@@ -7,7 +7,7 @@
 # Pista: Usa un while con una condición que se mantenga verdadera mientras el usuario no seleccione "Salir".
 # Implementa opciones como "Mostrar mensaje", “Mostrar nombres", y "Salir".
 
-print ("Bienvenido al menu de opciones")
+print ("Bienvenido al Menú interactivo")
 while True:
   print ("1. Mostrar Mensaje")
   print ("2. Mostrar Nombres")
