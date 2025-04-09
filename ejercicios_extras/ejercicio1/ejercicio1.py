@@ -26,13 +26,14 @@ while True:
     try:
         guess = int(guess_input)
     except:
-        print("Por favor, ingresa un número válido.")
+        print("Por favor, ingresa un número valido.")
         continue
     attempts = attempts + 1
     if guess < secret_number:
-        print("Demasiado bajo.")
+        print("El número es mayor.")
     elif guess > secret_number:
-        print("Demasiado alto.")
+        print("El número es menor.")
     else:
-        print("¡Correcto! Adivinaste el número en", attempts, "intentos.")
+        print("¡Adivinaste el número en", attempts, "intentos!")
         break
+    

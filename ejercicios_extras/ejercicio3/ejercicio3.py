@@ -39,45 +39,32 @@
 # claras para que el usuario pueda elegir lo que desea hacer (ver inventario, agregar,
 # modificar, eliminar, salir).
 
-inventory = {}
+inventario = {}
+
 while True:
-    print("\nMenú de Inventario:")
-    print("1. Ver inventario")
-    print("2. Agregar producto")
-    print("3. Modificar cantidad de un producto")
-    print("4. Eliminar producto")
-    print("5. Salir")
-    option = input("Elige una opción (1-5): ")
-    if option == "1":
-        if len(inventory) == 0:
-            print("El inventario está vacío.")
-        else:
-            for product in inventory:
-                data = inventory[product]
-                print("Producto:", product, "- Cantidad:", data["cantidad"], "- Precio:", data["precio"])
-    elif option == "2":
-        name = input("Nombre del producto: ")
-        quantity = int(input("Cantidad: "))
-        price = float(input("Precio: "))
-        inventory[name] = {"cantidad": quantity, "precio": price}
-        print("Producto agregado correctamente.")
-    elif option == "3":
-        name = input("Nombre del producto a modificar: ")
-        if name in inventory:
-            new_quantity = int(input("Nueva cantidad: "))
-            inventory[name]["cantidad"] = new_quantity
-            print("Cantidad actualizada.")
-        else:
-            print("El producto no existe.")
-    elif option == "4":
-        name = input("Nombre del producto a eliminar: ")
-        if name in inventory:
-            del inventory[name]
-            print("Producto eliminado.")
-        else:
-            print("El producto no existe.")
-    elif option == "5":
-        print("Saliendo del sistema. ¡Hasta luego!")
+    print ("1.Ver el inventario actual")
+    print ("2.Agregar Nuevos Productos")
+    print ("3.Modificar la cantidad de un producto existente")
+    print ("4.Eliminar productos")
+    print ("5. Salir del sistema")
+
+    opcion = int(input("Ingrese la opcion que desea realizar: "))
+
+    if opcion == 1:
+        print(inventario)
+    elif opcion == 2:
+        producto = input("Ingrese El Nombre Del Producto: ")
+        cantidad = int(input("Ingrese la cantidad del producto: "))
+        precio = int(input("Ingrese el precio del producto: "))
+        inventario [producto] = {"cantidad": cantidad, "precio": precio}
+    elif opcion == 3:
+        producto = input("Ingrese el Nombre del Producto:")
+        cantidad = int(input("Ingrese la cantidad del producto:"))
+        inventario[producto]["cantidad"] = cantidad
+    elif opcion == 4:
+            producto = input("Ingrese el Nombre del Producto:")
+            del inventario[producto]
+    elif opcion == 5:
+        print("Saliendo del sistema de inventario")
         break
-    else:
-        print("Opción no válida, por favor intenta de nuevo.")
+            

@@ -21,28 +21,25 @@
 # 4. Salir
 # El programa finalizará amablemente cuando el usuario seleccione esta opción.
 
-print("Bienvenido al Conversor de Unidades")
+print ("Bienvenido al conversor de unidades")
 while True:
-    print("\nMenú:")
-    print("1. Metros a kilómetros")
-    print("2. Gramos a kilogramos")
-    print("3. Centígrados a Fahrenheit")
-    print("4. Salir")
-    choice = input("Elige una opción (1-4): ")
-    if choice == "1":
-        meters = float(input("Ingresa la cantidad en metros: "))
-        km = meters / 1000
-        print(meters, "metros son", km, "kilómetros.")
-    elif choice == "2":
-        grams = float(input("Ingresa la cantidad en gramos: "))
-        kg = grams / 1000
-        print(grams, "gramos son", kg, "kilogramos.")
-    elif choice == "3":
-        celsius = float(input("Ingresa la temperatura en °C: "))
-        fahrenheit = (celsius * 9/5) + 32
-        print(celsius, "°C son", fahrenheit, "°F.")
-    elif choice == "4":
-        print("Gracias por usar el conversor. ¡Adiós!")
-        break
-    else:
-        print("Opción no válida, intenta de nuevo.")
+  print ("1. Metros a kilómetros")
+  print ("2. Gramos a kilogramos")
+  print ("3. Centígrados a Fahrenheit")
+  print ("4. Salir")
+  opcion = int (input ("Seleccione una opción: "))
+  if opcion == 1:
+    metros = float (input ("Ingrese los metros: "))
+    kilometros = metros / 1000
+    print (metros, "metros son", kilometros, "kilómetros")
+  elif opcion == 2:
+    grams = float (input ("Ingrese los gramos: "))
+    kilograms = grams / 1000
+    print (grams,"gramos son" , kilograms, "kilogramos")
+  elif opcion == 3:
+    centigrados = float (input ("Ingrese los Centígrados:"))
+    fahrenheit = (centigrados * 1.8) + 32
+    print (centigrados , "Centígrados son" , fahrenheit, "Fahrenheit")
+  elif opcion == 4:
+    print ("Saliendo del Sistema de Conversion")
+    break
