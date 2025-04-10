@@ -76,8 +76,7 @@ while True:
   else:
     print("Opción inválida. Intente nuevamente.")
 
-  
-  # Menú interactivo:
+# Menú interactivo:
 # Crea un programa que muestre un menú con opciones.
 # El usuario debe seleccionar una opción del menú, y el programa ejecutará una acción según la opción
 # elegida. Si el usuario elige "Salir", el programa debe finalizar.
