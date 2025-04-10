@@ -28,31 +28,54 @@ datos = {
 }
 
 while True:
-  print("1. Ingrese la Clave:")
+  print("\n1. Ingrese la Clave:")
   print("2. Visualización del Estado Actual")
   print("3. Eliminación de Elementos")
   print("4. Salir")
   opcion = input("Seleccione una Opcion: ")
   
   if opcion == "1":
-    key = input("Ingrese la Clave: ")
-    if key == "":
-      print("La Clave no puede estar Vacia")
-    new_value = input("Ingrese el Nuevo Valor: ")
-    if new_value == "":
-      print("El Nuevo Valor no puede estar Vacio")
-    datos[key] = new_value
-  elif opcion == "2":
-    print("Estado actual de los datos:")
+    key = input("Ingrese la Clave a modificar: ")
+    match key:
+      case "":
+        print("La Clave no puede estar vacía.")
+        continue
+      
+    if key in datos:
+      new_value = input("Ingrese el Nuevo Valor: ")
+      match new_value:
+        case "":
+          print("El Nuevo Valor no puede estar vacío.")
+          continue
+      datos[key] = new_value
+      print("Dato actualizado correctamente.")
+      
+    else:
+      print("La clave no existe en el diccionario. No se puede modificar.")
+    print("Estado actual del diccionario:")
     print(datos)
+    
+  elif opcion == "2":
+    print("Estado actual del diccionario:")
+    print(datos)
+    
   elif opcion == "3":
     key = input("Ingrese la clave que desea eliminar: ")
     if key in datos:
       del datos[key]
-      print(datos)
+      print(f"Clave '{key}' eliminada correctamente.")
+    else:
+      print(f"La clave '{key}' no se encontró en el diccionario.")
+    
+    print("Estado actual del diccionario:")
+    print(datos)
+    
   elif opcion == "4":
-    print("Saliendo del Programa")  
+    print("Saliendo del Programa.")
     break
+  else:
+    print("Opción inválida. Intente nuevamente.")
+
   
   # Menú interactivo:
 # Crea un programa que muestre un menú con opciones.
