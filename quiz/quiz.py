@@ -28,7 +28,7 @@ datos = {
 }
 
 while True:
-  print("\n1. Ingrese la Clave:")
+  print("1. Ingrese la Clave:")
   print("2. Visualización del Estado Actual")
   print("3. Eliminación de Elementos")
   print("4. Salir")
