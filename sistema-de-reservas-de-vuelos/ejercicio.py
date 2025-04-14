@@ -39,9 +39,9 @@ list_of_flights = [
 def show_flights():
     print("Lista de vuelos disponibles:")
     for flight in list_of_flights:
-        print(f"Vuelo {flight['flight_number']}: {flight['origin']} -> {flight['destination']}, "
-              f"Fecha: {flight['date']} {flight['time']}, Asientos disponibles: {flight['available_seats']}, "
-              f"Precio: {flight['price']}")
+        print(f"Vuelo {flight["flight_number"]}: {flight["origin"]} -> {flight["destination"]}, "
+              f"Fecha: {flight["date"]} {flight["time"]}, Asientos disponibles: {flight["available_seats"]}, "
+              f"Precio: {flight["price"]}")
 
 
 reservations = []
@@ -50,7 +50,8 @@ while True:
     print("1. Ver disponibilidad de vuelos")
     print("2. Reservar vuelo")
     print("3. Cancelar reserva")
-    print("4. Salir")
+    print("4. Ver reservas")
+    print("5. Salir")
     opcion = input("Seleccione una opción: ")
 
     if opcion == "1":
@@ -116,6 +117,14 @@ while True:
             print("Reserva no encontrada.")
 
     elif opcion == "4":
+        if not reservations:
+            print("No hay reservas registradas.")
+        else:
+            for reserva in reservations:
+                print(
+                    f"Reserva para el vuelo {reserva['flight_number']}: {reserva['name']} {reserva['last_name']}")
+
+    elif opcion == "5":
         print("Saliendo del sistema...")
         break
 
