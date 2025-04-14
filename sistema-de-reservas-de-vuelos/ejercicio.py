@@ -122,11 +122,11 @@ while True:
         else:
             for reserva in reservations:
                 print(
-                    f"Reserva para el vuelo {reserva['flight_number']}: {reserva['name']} {reserva['last_name']}")
+                    f"Reserva para el vuelo {reserva["flight_number"]}: {reserva["name"]} {reserva["last_name"]}")
 
     elif opcion == "5":
         print("Saliendo del sistema...")
         break
 
     else:
-        print("Opción no válida. Por favor, seleccione 1, 2, 3 o 4.")
+        print("Opción no válida. Por favor, seleccione 1, 2, 3 ,4 o 5.")
