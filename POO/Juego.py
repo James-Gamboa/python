@@ -39,10 +39,13 @@ class Juego:
         print(f"\n¡Bienvenido, {self.nombre_jugador}!")
         print("Selecciona el juego que deseas jugar:")
         print("1. Cifrado César")
+        print("2. Ordenamiento Bubble Sort")
         opcion = input("Elige una opción (1 o 2): ")
 
         if opcion == "1":
             self.jugar_cifrado_cesar()
+        elif opcion == "2":
+            self.jugar_bubble_sort()
         else:
             print("Opción inválida. Volviendo al menú principal.")
 
@@ -61,6 +64,23 @@ class Juego:
         print(f"\nMensaje original: {mensaje}")
         print(f"Mensaje cifrado (desplazamiento 3): {resultado}")
         print("¡Juego de Cifrado César terminado!\n")
+
+    def jugar_bubble_sort(self):
+        try:
+            entrada = input(
+                "\nIngresa números separados por coma (ej: 5,3,8,1): ")
+            numeros = list(map(int, entrada.split(",")))
+        except ValueError:
+            print("Entrada inválida. Asegúrate de ingresar solo números.")
+            return
+
+        for i in range(len(numeros)):
+            for j in range(len(numeros) - 1 - i):
+                if numeros[j] > numeros[j + 1]:
+                    numeros[j], numeros[j + 1] = numeros[j + 1], numeros[j]
+
+        print(f"Lista ordenada: {numeros}")
+        print("¡Juego de Bubble Sort terminado!\n")
 
     def salir(self):
         print(f"\nHasta luego, {self.nombre_jugador}. ¡Vuelve pronto!")
