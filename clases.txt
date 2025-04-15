@@ -1,0 +1,115 @@
+Identificar 5 Entidades que ustedes gusten de ellas se debe obtener una
+sola clase padre o superclase.
+
+Asignar al menos 4 atributos de instancia para cada clase.
+
+Asignar 3 Metodos de instancia a cada clase
+
+Al menos 2 clases hijas deben de heredar del padre.
+
+*Entidad
+Vehiculo
+
+*Atributos
+
+Marca
+Modelo
+Año de fabricacion
+Velocidad maxima
+
+*Metodos de instancia
+
+Acelerar
+Frenar
+panel de control del Vehiculo
+
+*Clase Hija 1: Automóvil (hereda de Vehiculo)
+
+*Hereda de Vehiculo:
+
+Atributos heredados: Marca, Modelo, Año de fabricacion, Velocidad maxima
+
+Metodos heredados: Acelerar, Frenar, panel de control del Vehiculo
+
+*Atributos propios
+
+Tipo de combustible
+Numero de puertas
+Transmisión
+Consumo de combustible
+
+*Metodos propios
+
+Encender motor
+Apagar motor
+Activar limpiaparabrisas
+
+*Clase Hija 2: Motocicleta (hereda de Vehiculo)
+
+*Hereda de Vehiculo:
+
+Atributos heredados: Marca, Modelo, Año de fabricacion, Velocidad maxima
+Metodos heredados: Acelerar, Frenar, panel de control del Vehiculo
+
+*Atributos propios
+
+Cilindraje
+Tipo de motocicleta
+Capacidad del tanque
+Tipo de frenos
+
+*Metodos propios
+
+Encender motor
+Realizar caballito
+Activar luces
+
+*Entidad
+Bicicleta
+
+*Atributos
+
+Tipo (montaña, ruta, bmx)
+
+Numero de velocidades
+Material del marco
+Tamaño de ruedas
+
+*Metodos de instancia
+
+Iniciar pedaleo
+Cambiar velocidad
+Frenar
+
+*Entidad
+Avion
+
+*Atributos
+
+Aerolinea
+Capacidad de pasajeros
+Alcance de vuelo
+Cantidad de motores
+
+*Metodos de instancia
+
+Despegar
+Aterrizar
+Estabilizar vuelo
+
+*Entidad
+
+Barco
+
+*Atributos
+
+Tipo de barco (crucero, pesquero, etc.)
+Capacidad de carga
+Tipo de motor
+movilidad
+
+*Metodos de instancia
+
+Zarpar
+Anclar
+Encender radar
