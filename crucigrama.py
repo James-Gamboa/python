@@ -8,9 +8,9 @@ d['kris'] = 9
 for (k, i) in d.items():
     print(k, i)
 
-lst = []
-for key, val in counts.items():
-    newtup = (val, key)
-    lst.append(newtup)
-lst = sorted(lst, reverse=True)
-print(lst)
+# lst = []
+# for key, val in counts.items():
+#     newtup = (val, key)
+#     lst.append(newtup)
+# lst = sorted(lst, reverse=True)
+# print(lst)
